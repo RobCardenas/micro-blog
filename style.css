@@ -1,0 +1,34 @@
+.navbar-custom {
+	background: #222;
+}
+
+.navbar-brand {
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.4em;
+}
+
+.jumbotron {
+    position: relative;
+    background: #000 url("img/mountains-hiker-header.jpeg") center bottom;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.navbar {
+  margin-bottom: 0;
+ }
+
+
+
+/* Media Queries */
+@media (min-width: 768px) {
+  .jumbotron {
+    height: 400px;
+  }
+  .navbar-brand {
+  	font-size: 2em;
+  }
+}
