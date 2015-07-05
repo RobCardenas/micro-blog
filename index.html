@@ -34,47 +34,50 @@
 
     <!-- Main Content -->
     <div class="container">
-      <div id="post-list"></div>
-      <div class="row header-top">
-        <div class="col-md-6 col-md-offset-3">
-          <div class="text-center">
-            <h3 class="align-left">Have something awesome to share? Go ahead and submit a new post!<h3>
-            <form id="new-post-submission">
-              <div class="form-group">
-                <input type="text" class="form-control" id="author-name" placeholder="Author Name" autofocus>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="new-post-title" placeholder="Post Title">
-              </div>
-              <div class="form-group">
-                <textarea class="form-control" id="new-post-content" placeholder="Write your post"></textarea>
-                <!-- <input type="text" class="form-control" id="new-post-content" placeholder="Post Content"> -->
-              </div>
-              <div class="form-group">
-                <input type="submit" class="btn btn-custom" value="Submit">
-              </div>
-            </form>
+      <div class="row hp-post">
+          <div class="col-md-2 col-md-offset-1">
+            <div id="author" data-toggle="tooltip" data-placement="bottom" title="Click anywhere to hide this post"><p><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Author: Hiker Paradise</p></div>
+          </div>
+          <div class="col-md-6 post">
+            <div id="post-title"><h1>Welcome to Hiker Paradise</h1></div>
+            <div id="post-content"><p>Welcome, glad you found us. On this page, you'll find great content geared towards the hiking enthusiasts. Content ranging from trails, gear, training techniques, food, snacks and knowledge from people from around the globe.</p></div>
           </div>
         </div>
-      </div>
-    </div>
-
-          <div class="clearfix"></div>
-          <!-- Footer -->
-
-
-          <div class="main-footer">
-            <div class="container">
-             <div class="col-xs-12 col-sm-12 col-md-12">
-              <p class="text-center">&copy; MMXV ROB CARDENAS</p>
+      <div id="post-list"></div>
+      <hr>
+      <div class="row">
+        <div class="col-md-6 col-md-offset-3 new-post-section">
+          <div class="text-center">
+            <h3 class="align-left">Have something awesome to share? Go ahead and submit a new post!<h3>
+              <form id="new-post-submission">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="author-name" placeholder="Author Name" autofocus>
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" id="new-post-title" placeholder="Post Title">
+                </div>
+                <div class="form-group">
+                  <textarea class="form-control" id="new-post-content" placeholder="Write your post"></textarea>
+                </div>
+                <div class="form-group">
+                  <input type="submit" class="btn btn-custom" value="Submit">
+                </div>
+              </form>
             </div>
           </div>
         </div>
+      </div>
 
-
-      
-      
-<!-- End Footer -->
+      <div class="clearfix"></div>
+      <!-- Footer -->
+      <div class="main-footer">
+          <div class="container">
+           <div class="col-xs-12 col-sm-12 col-md-12">
+            <p class="text-center">&copy; MMXV HIKER PARADISE</p>
+          </div>
+        </div>
+      </div>
+      <!-- End Footer -->
 
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -97,12 +100,12 @@
  
     <script type="text/template" id="post-template">
       <!-- Start User Post -->
-      <div id="todo-items">
+      <div id="post-underscore-template">
         <div class="row new-post">
           <div class="col-md-2 col-md-offset-1 sidebar">
             <div id="author"><p>Author: <%= author %></p></div>
           </div>
-          <div class="col-md-8 post">
+          <div class="col-md-6 post">
             <div id="post-title"><h1><%= postTitle %></h1></div>
             <div id="post-content"><p><%= userPost %></p></div>
           </div>

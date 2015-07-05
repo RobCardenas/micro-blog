@@ -4,7 +4,10 @@ h3.align-left {
 
 #post-title h1 {
   margin-top: 0;
+  font-size: 1.4em;
 }
+
+/* NAVIGATION */ 
 
 .navbar-custom {
 	background: #0c030c;
@@ -20,6 +23,10 @@ h3.align-left {
 	color: #c2c0c0;
 }
 
+.navbar {
+  margin-bottom: 0;
+}
+
 .jumbotron {
   position: relative;
   background: #000 url("img/hiking.jpg") center bottom;
@@ -29,17 +36,28 @@ h3.align-left {
   overflow: hidden;
 }
 
-.navbar {
-  margin-bottom: 0;
+/* WELCOME POST */
+
+.hp-post {
+  background: #f9f9f9;
+  border-radius: 0.5em;
+  margin-bottom: 30px;
+  padding: 30px 0;
 }
+
+.glyphicon-remove:hover {
+  color: red;
+}
+
+/* NEW POST SECTION */
 
 .new-post {
   margin-bottom: 30px;
 }
 
 .post {
-
-  border-left: 1px dotted #0c030c;
+  border-left: 1px dotted #eee;
+  text-align: justify;
 }
 
 .btn-custom {
@@ -48,10 +66,31 @@ h3.align-left {
   border-color: #1a1c2d;
 }
 
-.form-control:focus {
-  border-color: #53bf6b;
-  box-shadow: inset 0 1px 1px rgba(71, 172, 93, 0.075), 0 0 8px rgba(83, 191, 107, 0.6);
+.btn-custom:hover {
+  color: #c2c0c0;
 }
+
+.form-control:focus {
+  border-color: #1772e8;
+  box-shadow: inset 0 1px 1px rgba(108, 170, 251, 0.075), 0 0 8px rgba(83, 191, 187, 0.6);
+}
+
+.new-post-section {
+  background: #eee;
+  border-radius: 0.5em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  background: #eee;
+  border-radius: 0.5em 0 0 0.5em;
+  padding-top: 5px;
+}
+
+/* FOOTER */
 
 .main-footer {
   background-color: #0c030c;
@@ -60,12 +99,16 @@ h3.align-left {
   clear: both;
 }
 
-/* Media Queries */
+/* MEDIA QUERIES */
+
 @media (min-width: 768px) {
   .jumbotron {
     height: 300px;
   }
   .navbar-brand {
   	font-size: 2em;
+  }
+  #post-title h1 {
+    font-size: 2em;
   }
 }

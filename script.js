@@ -1,5 +1,17 @@
 $(function() {
 
+    
+    // Tooltip to tell user they can hide the welcome post 
+    $(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+    });
+
+    // Welcome posts fades away when clicked
+    var $welcomePost = $('.hp-post');
+    $welcomePost.on("click", function() {
+    $(this).fadeOut(1600);
+    });
+
     // global variables
     // variable that stores user posts
     var $postList = $("#post-list");
@@ -50,7 +62,7 @@ $(function() {
         var newPost = new UserPost(newAuthor,newPostTitle,newPostContent);
 
         if (newAuthor === '' || newPostTitle === '' || newPostContent === '' ) {
-            alert("All field required")
+            alert("All fields required")
 
         } else {
             newPost.save();
