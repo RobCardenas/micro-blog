@@ -18,7 +18,7 @@ $(function() {
 
     UserPost.allPosts = [];
 
-    var testerPost = new UserPost("Rob", "Kukulkan, the Ancient Serpent","The Ancient Serpent worshipped by the Mayans was....");
+    var testerPost = new UserPost("Rob", "Conquering Yosemite's Half Dome","Did you know that anyone who's in shape and willing to suffer a whole day can climb Yosemite's Half Dome? Well, you can. First of all, you'll need a permit which you can get at Recreation.gov and pay a reservation fee if you're able to score a permit. You will not be able to go up the cables without a permit, I repeat, the ranger will deny you access to the cables if you don't have a permit.  ");
 
     UserPost.prototype.save = function() {
         // saves new posts to array
@@ -41,25 +41,28 @@ $(function() {
 
     // on click to submit our data
     $newPostSub.on("submit", function(event) {
-    event.preventDefault();
+        event.preventDefault();
 
-    // create new todo object from form data
-    var newAuthor = $('#author-name').val();
-    var newPostTitle = $('#new-post-title').val();
-    var newPostContent = $('#new-post-content').val();
-    var newPost = new UserPost(newAuthor,newPostTitle,newPostContent);
+        // create new todo object from form data
+        var newAuthor = $('#author-name').val();
+        var newPostTitle = $('#new-post-title').val();
+        var newPostContent = $('#new-post-content').val();
+        var newPost = new UserPost(newAuthor,newPostTitle,newPostContent);
 
-    newPost.save();
+        if (newAuthor === '' || newPostTitle === '' || newPostContent === '' ) {
+            alert("All field required")
 
-    // append our new todo to the page
-    var $posts = $(postTemplate(newPost));
+        } else {
+            newPost.save();
+            // append our new todo to the page
+            var $posts = $(postTemplate(newPost));
+            $posts.attr('data-index', newPost.author, newPost.postTitle, newPost.userPostContent);
+            $postList.append($posts);
+        }
 
-    $posts.attr('data-index', newPost.author, newPost.postTitle, newPost.userPostContent);
-    $postList.append($posts);
-
-    // reset the form
-    $newPostSub[0].reset();
-    $("#author-name").focus();
+        // reset the form
+        $newPostSub[0].reset();
+        $("#author-name").focus();
 
   });
 
