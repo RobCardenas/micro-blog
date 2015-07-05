@@ -32,6 +32,7 @@
       </div>
     </div>
 
+    <!-- Main Content -->
     <div class="container">
       <div id="post-list"></div>
       <div class="row header-top">
@@ -46,13 +47,34 @@
                 <input type="text" class="form-control" id="new-post-title" placeholder="Post Title">
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" id="new-post-content" placeholder="Post Content">
+                <textarea class="form-control" id="new-post-content" placeholder="Write your post"></textarea>
+                <!-- <input type="text" class="form-control" id="new-post-content" placeholder="Post Content"> -->
               </div>
               <div class="form-group">
-                <input type="submit" class="btn btn-success" value="Submit New Post">
+                <input type="submit" class="btn btn-custom" value="Submit">
               </div>
             </form>
           </div>
+        </div>
+      </div>
+    </div>
+
+          <div class="clearfix"></div>
+          <!-- Footer -->
+
+
+          <div class="main-footer">
+            <div class="container">
+             <div class="col-xs-12 col-sm-12 col-md-12">
+              <p class="text-center">&copy; MMXV ROB CARDENAS</p>
+            </div>
+          </div>
+        </div>
+
+
+      
+      
+<!-- End Footer -->
 
   <!-- jquery -->
   <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -80,7 +102,7 @@
           <div class="col-md-2 col-md-offset-1 sidebar">
             <div id="author"><p>Author: <%= author %></p></div>
           </div>
-          <div class="col-md-8 col-md-offset-3 post">
+          <div class="col-md-8 post">
             <div id="post-title"><h1><%= postTitle %></h1></div>
             <div id="post-content"><p><%= userPost %></p></div>
           </div>
