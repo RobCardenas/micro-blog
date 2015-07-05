@@ -39,12 +39,12 @@ $(function() {
 
     testerPost.save();
 
-    // Function that renders tasks into ToDo array
+    // Function that renders tasks into UserPost array
     UserPost.prototype.render = function() {
         return postTemplate;
     };
 
-    // appends existing todos (from seed data) to `$taskOL`
+    // appends existing posts (from seed data) to `$postList`
     _.each(UserPost.allPosts, function (post, index) {
         var $posts = $(postTemplate(post));
         $posts.attr('data-index', index);
@@ -55,7 +55,7 @@ $(function() {
     $newPostSub.on("submit", function(event) {
         event.preventDefault();
 
-        // create new todo object from form data
+        // create new post object from form data
         var newAuthor = $('#author-name').val();
         var newPostTitle = $('#new-post-title').val();
         var newPostContent = $('#new-post-content').val();
@@ -66,7 +66,7 @@ $(function() {
 
         } else {
             newPost.save();
-            // append our new todo to the page
+            // append our new post to the page
             var $posts = $(postTemplate(newPost));
             $posts.attr('data-index', newPost.author, newPost.postTitle, newPost.userPostContent);
             $postList.append($posts);
