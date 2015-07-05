@@ -13,44 +13,80 @@
 
   </head>
   <body>
-    <!-- Navigation Bar -->
+    <!-- Navigation Bar and Jumbotron -->
     <nav class="navbar navbar-custom navbar-static-top">
       <div class="container-fluid">
         <div class="navbar-header">
           <div class="container">
+            <div class="col-md-11 col-md-offset-1">
             <a class="navbar-brand" href="#">
               Hiker Paradise
             </a>
           </div>
         </div>
+        </div>
       </div>
     </nav>
-
     <div class="jumbotron">
       <div class="container">
       </div>
     </div>
 
     <div class="container">
+      <div id="post-list"></div>
+      <div class="row header-top">
+        <div class="col-md-6 col-md-offset-3">
+          <div class="text-center">
+            <h3 class="align-left">Have something awesome to share? Go ahead and submit a new post!<h3>
+            <form id="new-post-submission">
+              <div class="form-group">
+                <input type="text" class="form-control" id="author-name" placeholder="Author Name" autofocus>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="new-post-title" placeholder="Post Title">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="new-post-content" placeholder="Post Content">
+              </div>
+              <div class="form-group">
+                <input type="submit" class="btn btn-success" value="Submit New Post">
+              </div>
+            </form>
+          </div>
 
-      <div id="book-container"></div>
+  <!-- jquery -->
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 
-      <!-- <script type="text/template" id="post-template"> -->
+  <script src="http://momentjs.com/downloads/moment.js"></script>
+
+  <!-- Latest compiled and minified Bootstrap JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <!-- underscore -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+  <!-- custom script -->
+  <script type="text/javascript" src="script.js"></script>
+
+  <!-- underscore template -->
+  
+
+  <!-- Underscore template -->
+ 
+    <script type="text/template" id="post-template">
       <!-- Start User Post -->
-      
+      <div id="todo-items">
+        <div class="row new-post">
+          <div class="col-md-2 col-md-offset-1 sidebar">
+            <div id="author"><p>Author: <%= author %></p></div>
+          </div>
+          <div class="col-md-8 col-md-offset-3 post">
+            <div id="post-title"><h1><%= postTitle %></h1></div>
+            <div id="post-content"><p><%= userPost %></p></div>
+          </div>
+        </div>
+      </div>
       <!-- End User Post -->
-      <!-- </script> -->
-
-    </div>
-
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <!-- underscore -->
-  	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
-  	<!-- custom script -->
-	<script type="text/javascript" src="script.js"></script>
-  </body>
+    </script>
+   </body>
 </html>
