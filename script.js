@@ -1,32 +1,43 @@
+$(function() {
 
     // global variables
-    var $postContainer = $('#post-container');
-    var $author = $('#author');
-    var $postTitle = $('#post-title');
-    var $userPostContent = $('#post-content'); 
+    var author = $('#author').val();
+    var postTitle = $('#post-title').val();
+    var userPostContent = $('#post-content').val();
 
-    // variable that stores underscore template
-    var $postTemplate = _.template($('#post-template').html());
+    // variable that stores user posts
+    var $postList = $("#post-list");
 
+    // underscore template
+    var postTemplate = _.template($('#post-template').html());
 
-    // Constructor function
-    function UserPost(author, postTitle, postContent) {
+    function UserPost(author,postTitle,userPost) {
         this.author = author;
         this.postTitle = postTitle;
-        this.postContent = postContent; 
+        this.userPost = userPost;
     }
 
-    // Testing data
-    UserPost.allPosts = [
-        new UserPost('Rob','Kukulkan, the Ancient Serpent','During ancient times the Mayans worshipped the wise Serpent'),
-        new UserPost('Bere','The World\'s Most Venomous Snakes','This world is filled with tiny creatures but powerful enought to...')
-    ];
+    UserPost.allPosts = [];
 
-    // Save function
+    var testerPost = new UserPost("Rob", "Kukulkan, the Ancient Serpent","The Ancient Serpent worshipped by the Mayans was....");
+
     UserPost.prototype.save = function() {
+        // saves new posts to array
         UserPost.allPosts.push(this);
-        console.log(UserPost.allPosts);
     };
-    
- 
 
+    testerPost.save();
+
+    // Function that renders tasks into ToDo array
+    UserPost.prototype.render = function() {
+        return postTemplate;
+    };
+
+    // appends existing todos (from seed data) to `$taskOL`
+    _.each(UserPost.allPosts, function (post, index) {
+        var $posts = $(postTemplate(post));
+        $posts.attr('data-index', index);
+        $postList.append($posts);
+    });
+
+});
