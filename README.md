@@ -10,7 +10,7 @@ Imagine you want to let people write really short public blog posts. The homepag
 | :------: | :---: | :-----: |
 | User Stories, OOP | Underscore, Bootstrap, jQuery, Git, Kanban Board |
 
-1. Using OOP, jQuery, Underscore.js, bootstrap and some custom styling, I made a basic template where users can add posts to the page where they can share their hiking experience and adventures. 
+1. Using OOP, jQuery, Underscore.js, bootstrap and some custom styling, I made a basic template where users can add posts to the page to share their hiking experience and adventures with the world. 
 2. Using bootstrap modal and form elements, users can opt to submit posts to be featured on the page.
 
 
