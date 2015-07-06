@@ -49,6 +49,10 @@ h3.align-left {
   color: red;
 }
 
+.glyphicon {
+  font-size: 0.8em;
+}
+
 /* NEW POST SECTION */
 
 .new-post {
@@ -80,6 +84,14 @@ h3.align-left {
   border-radius: 0.5em;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+#post-count {
+  background: #282b3f;
+  border-radius: 0.5em;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 5px;
 }
 
 /* SIDEBAR */

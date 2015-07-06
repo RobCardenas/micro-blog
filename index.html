@@ -34,12 +34,13 @@
 
     <!-- Main Content -->
     <div class="container">
-      <div class="row hp-post">
+      <div class="row hp-post" data-toggle="tooltip" data-placement="top" title="Click anywhere to hide this post">
           <div class="col-md-2 col-md-offset-1">
-            <div id="author" data-toggle="tooltip" data-placement="bottom" title="Click anywhere to hide this post"><p><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Author: Hiker Paradise</p></div>
+            <div id="author"><p>Author: Hiker Paradise</p></div>
+            <div id="location"><p>Location: Paradise</p></div>
           </div>
           <div class="col-md-6 post">
-            <div id="post-title"><h1>Welcome to Hiker Paradise</h1></div>
+            <div id="post-title"><h1><span class="glyphicon glyphicon-remove" aria-hidden="true"></span> Welcome to Hiker Paradise</h1></div>
             <div id="post-content"><p>Welcome, glad you found us. On this page, you'll find great content geared towards the hiking enthusiasts. Content ranging from trails, gear, training techniques, food, snacks and knowledge from people from around the globe.</p></div>
           </div>
         </div>
@@ -54,6 +55,9 @@
                   <input type="text" class="form-control" id="author-name" placeholder="Author Name" autofocus>
                 </div>
                 <div class="form-group">
+                  <input type="text" class="form-control" id="author-location" placeholder="Location" autofocus>
+                </div>
+                <div class="form-group">
                   <input type="text" class="form-control" id="new-post-title" placeholder="Post Title">
                 </div>
                 <div class="form-group">
@@ -64,6 +68,15 @@
                 </div>
               </form>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Post count -->
+      <div class="row">
+        <div class="col-md-2 col-md-offset-5">
+          <div class="text-center">
+            <h4 id="post-count">Post Count: 1</h4>
           </div>
         </div>
       </div>
@@ -104,6 +117,7 @@
         <div class="row new-post">
           <div class="col-md-2 col-md-offset-1 sidebar">
             <div id="author"><p>Author: <%= author %></p></div>
+            <div id="location"><p>Location: <%= location %></p></div>
           </div>
           <div class="col-md-6 post">
             <div id="post-title"><h1><%= postTitle %></h1></div>
