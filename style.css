@@ -45,12 +45,15 @@ h3.align-left {
   padding: 30px 0;
 }
 
-.glyphicon-remove:hover {
-  color: red;
-}
-
-.glyphicon {
-  font-size: 0.8em;
+.exit {
+    width: 22px;
+    height: 22px;
+    background: transparent url(img/close-button.png) no-repeat 0 0;
+    display: block;
+    position: relative;
+    float: left;
+    margin-top: -40px;
+    left: 10px;
 }
 
 /* NEW POST SECTION */
@@ -123,4 +126,8 @@ h3.align-left {
   #post-title h1 {
     font-size: 2em;
   }
+  .exit {
+    margin-top: -40px;
+    left: -10px;
+}
 }
