@@ -1,0 +1,25 @@
+{
+  "name": "micro-blog",
+  "version": "1.0.0",
+  "description": "\"A micro-blog with API integration\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobCardenas/micro-blog.git"
+  },
+  "author": "Rob Cardenas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobCardenas/micro-blog/issues"
+  },
+  "homepage": "https://github.com/RobCardenas/micro-blog#readme",
+  "dependencies": {
+    "body-parser": "^1.13.2",
+    "express": "^4.13.1",
+    "request": "^2.58.0",
+    "underscore": "^1.8.3"
+  }
+}

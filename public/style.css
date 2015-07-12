@@ -1,5 +1,5 @@
 h3.align-left {
-  text-align: left;
+  text-align: left; 
 }
 
 #post-title h1 {
@@ -62,7 +62,7 @@ h3.align-left {
   margin-bottom: 30px;
 }
 
-.post {
+.post-area {
   border-left: 1px dotted #eee;
   text-align: justify;
 }
