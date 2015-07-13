@@ -22,8 +22,7 @@ app.get('/', function (req, res) {
 
 //pre seeded blog post data
 var blogPosts = [
-  {id: 1, author: 'Rob', location: 'California', postTitle: 'Conquering Yosemite\'s Half Dome', userPost: 'Did you know that anyone who\'s in shape and willing to suffer a whole day can climb Yosemite\'s Half Dome? Well, you can. First of all, you\'ll need a permit which you can get at Recreation.gov and pay a reservation fee if you\'re able to score a permit. You will not be able to go up the cables without a permit, I repeat, the ranger will deny you access to the cables if you don\'t have a permit.'},
-  {id: 2, author: 'Fer', location: 'Kansas', postTitle: 'Mountaineering in Kansas', userPost: 'Mountaineering in Kansas has to be one of the easiers parts of the country where you can climb a mountain. Just kidding, there\s no mountains in Wichita. Go to the next state, ColoRADo, now that\'s a place where you\'ll have fun summiting mountains.'}
+  {id: 1, author: 'Rob', location: 'California', postTitle: 'Conquering Yosemite\'s Half Dome', userPost: 'Did you know that anyone who\'s in shape and willing to suffer a whole day can climb Yosemite\'s Half Dome? Well, you can. First of all, you\'ll need a permit which you can get at Recreation.gov and pay a reservation fee if you\'re able to score a permit. You will not be able to go up the cables without a permit, I repeat, the ranger will deny you access to the cables if you don\'t have a permit.'}
 ];
 
 // posts index
