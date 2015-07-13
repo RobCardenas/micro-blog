@@ -77,6 +77,11 @@ h3.align-left {
   color: #c2c0c0;
 }
 
+.btn-danger-custom {
+  color: #fff;
+  background-color: #c65874;
+}
+
 .form-control:focus {
   border-color: #1772e8;
   box-shadow: inset 0 1px 1px rgba(108, 170, 251, 0.075), 0 0 8px rgba(83, 191, 187, 0.6);

@@ -2,6 +2,9 @@
 
 $(function() {
 
+  $('html').animate({scrollTop:0}, 1);
+  $('body').animate({scrollTop:0}, 1);
+
   // Tooltip to tell user they can hide the welcome post 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip();
