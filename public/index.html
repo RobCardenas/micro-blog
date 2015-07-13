@@ -121,25 +121,22 @@
             <div id="post-title"><h1><%= postTitle %></h1></div>
             <div id="post-content"><p><%= userPost %></p></div>
 
-            <!-- delete button -->
-            <button class="close right-side delete-post" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-
             <!-- edit glyphicon to toggle form -->
             <a data-toggle="collapse" data-target="#update-<%= id %>">
-              <span class="glyphicon glyphicon-edit edit"></span>
+              <span class="glyphicon glyphicon-edit edit" title="Edit Post"></span>
             </a>
 
             <!-- form to update post -->
             <div class="collapse" id="update-<%= id %>">
               <br>
               <form class="form-group update-post">
-                <input type="text" class="form-control updated-author" value="<%= author %>">
-                <input type="text" class="form-control updated-location" value="<%= location %>">
-                <input type="text" class="form-control updated-post-title" value="<%= postTitle %>">
-                <input type="text" class="form-control updated-user-post" value="<%= userPost %>">
-                <input type="submit" class="btn btn-default" value="Update phrase">
+                <input type="text" class="form-control updated-author" value="<%= author %>"><br>
+                <input type="text" class="form-control updated-location" value="<%= location %>"><br>
+                <input type="text" class="form-control updated-post-title" value="<%= postTitle %>"><br>
+                <input type="text" class="form-control updated-user-post" value="<%= userPost %>"><br>
+                <input type="submit" class="btn btn-custom" value="Update Post">
+                <input type="button" class="btn btn-danger delete-post" value="Delete">
+                <!-- delete button -->
               </form>
             </div>
             

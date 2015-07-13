@@ -120,17 +120,18 @@ $(function() {
         // reset the form
         $(this)[0].reset();
         $('#author-name').focus();
+        
         // Post Counter
-        // var $postCount = 0;
-        // console.log(postsController.all.blogPosts.length);
-        // if ( postsController.all().length === [] ) {
-        //     $postCount;
-        // } else {
-        //     $postCount += postsController.all().length;
-        // }
+        var $postCount = 0;
+        console.log(postsController.all.blogPosts.length);
+        if ( postsController.all().length === [] ) {
+            $postCount;
+        } else {
+            $postCount += postsController.all().length;
+        }
 
-        // var el = document.querySelector("#post-count");
-        // el.innerText = "Post Count: " + $postCount;
+        var el = $("#post-count");
+        el.innerText = "Post Count: " + $postCount;
 
       });
     }
