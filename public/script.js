@@ -2,6 +2,7 @@
 
 $(function() {
 
+  // Sets page to top on refresh
   $('html').animate({scrollTop:0}, 1);
   $('body').animate({scrollTop:0}, 1);
 
@@ -125,16 +126,16 @@ $(function() {
         $('#author-name').focus();
         
         // Post Counter
-        var $postCount = 0;
-        console.log(postsController.all.blogPosts.length);
-        if ( postsController.all().length === [] ) {
-            $postCount;
-        } else {
-            $postCount += postsController.all().length;
-        }
+        // var $postCount = 0;
+        // console.log(postsController.all.blogPosts.length);
+        // if ( postsController.all().get() === [] ) {
+        //     $postCount;
+        // } else {
+        //     $postCount += postsController.all().get().length;
+        // }
 
-        var el = $("#post-count");
-        el.innerText = "Post Count: " + $postCount;
+        // var el = $("#post-count");
+        // el.innerText = "Post Count: " + $postCount;
 
       });
     }

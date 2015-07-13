@@ -82,6 +82,15 @@ h3.align-left {
   background-color: #c65874;
 }
 
+a .glyphicon-edit {
+  color: #1772e8;
+  font-size: 1.2em;
+}
+
+a .glyphicon-edit:hover {
+  color: #282b3f;
+}
+
 .form-control:focus {
   border-color: #1772e8;
   box-shadow: inset 0 1px 1px rgba(108, 170, 251, 0.075), 0 0 8px rgba(83, 191, 187, 0.6);
